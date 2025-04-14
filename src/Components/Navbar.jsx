@@ -5,11 +5,15 @@ const Navbar = () => {
   // Set initial active link to "home" to ensure it's highlighted on page load
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Function to handle navigation when a link is clicked
   const handleNavigation = (section) => {
     // Update the active link immediately when clicked
     setActiveLink(section);
+    
+    // Close the mobile menu when a link is clicked
+    setMenuOpen(false);
 
     // Scroll to the section
     const element = document.getElementById(section);
@@ -26,6 +30,31 @@ const Navbar = () => {
       });
     }
   };
+
+  // Toggle mobile menu
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Check if menu is open and the click is outside the navbar
+      if (menuOpen && !event.target.closest('.navbar')) {
+        setMenuOpen(false);
+      }
+    };
+
+    // Add event listener when menu is open
+    if (menuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuOpen]);
 
   // Function to detect which section is currently in view
   useEffect(() => {
@@ -91,7 +120,15 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="logo">Saad.</div>
-      <ul className="nav-links">
+      
+      {/* Hamburger Menu Icon */}
+      <div className={`menu-icon ${menuOpen ? "active" : ""}`} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li>
           <a
             href="#home"
