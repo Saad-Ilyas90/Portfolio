@@ -1,0 +1,50 @@
+.education-section {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.education-section h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.education-section h2::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background-color: #00abf0;
+  bottom: -10px;
+  left: 25%;
+}
+
+.education-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .education-section {
+    padding: 15px;
+  }
+
+  .education-section h2 {
+    font-size: 2rem;
+  }
+
+  .education-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
