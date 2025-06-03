@@ -96,7 +96,7 @@
   font-weight: 600;
 }
 
-.demo-link {
+.demo-link, .github-link {
   color: white;
   text-decoration: none;
   font-size: 1rem;
@@ -104,9 +104,10 @@
   display: inline-flex;
   align-items: center;
   transition: color 0.3s ease;
+  margin-right: 15px;
 }
 
-.demo-link:hover {
+.demo-link:hover, .github-link:hover {
   color: #00abf0;
 }
 

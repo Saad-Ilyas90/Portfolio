@@ -5,20 +5,28 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Modern Site",
+      title: "Chess AI",
       image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
-      demoLink: "https://example.com/demo1",
+        "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      demoLink: "https://www.chessai.games",
+      githubLink: "https://github.com/Saad-Ilyas90/Chess-Ai"
     },
     {
       id: 2,
+      title: "Lawyer AI",
+      image:
+        "https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      githubLink: "https://github.com/basitali0318/Lawyer-AI"
+    },
+    {
+      id: 3,
       title: "Mobile App",
       image:
         "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       demoLink: "https://example.com/demo2",
     },
     {
-      id: 3,
+      id: 4,
       title: "Web Development",
       image:
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -55,6 +63,16 @@ const Projects = () => {
                   >
                     View Demo <span className="arrow">↗</span>
                   </a>
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="github-link"
+                    >
+                      GitHub <span className="arrow">↗</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
