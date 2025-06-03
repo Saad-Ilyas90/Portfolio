@@ -20,10 +20,10 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Mobile App",
+      title: "Campus Management System",
       image:
-        "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      demoLink: "https://example.com/demo2",
+        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      githubLink: "https://github.com/Saad-Ilyas90/Campus-Management-System"
     },
     {
       id: 4,
